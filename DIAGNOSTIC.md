@@ -6,10 +6,10 @@ appliquée. Il se termine par ce qui a été **volontairement non corrigé**.
 
 Branche de travail : `fix/harness-repair` (AGENTS.md interdit de commiter sur `main`).
 
-> Note sur les preuves : la machine n'a pas d'environnement graphique exploitable pour
-> des captures d'écran. Les preuves sont donc des **captures terminal** (sorties brutes
-> conservées telles quelles) dans `captures/`, plus les traces de session OpenCode
-> (`captures/avant/chain-errors.log`). Voir `captures/README.md`.
+> Note sur les preuves : toutes les preuves sont dans `captures/`, au format **PNG**
+> (rendu de la sortie terminal de chaque commande, accents et couleurs compris). La
+> machine n'ayant pas d'environnement graphique, ce sont des rendus de terminal et non
+> des captures d'écran au sens strict. Voir `captures/README.md`.
 
 ---
 
@@ -128,7 +128,7 @@ packagé (voir §3).
 - Correction : `tester` ajouté au tableau et à l'étape de vérification.
 
 **10. Les modèles des agents n'existent pas → tous les subagents échouent.**
-- Preuve (trace du run « avant », `captures/avant/chain-errors.log`) :
+- Preuve (trace du run « avant », `captures/avant/chain-errors.png`) :
   ```
   ERROR ProviderModelNotFoundError: Model not found: opencode/deepseek-v4-flash
   ERROR ProviderModelNotFoundError: Model not found: opencode/deepseek-v4-pro
@@ -178,7 +178,7 @@ packagé (voir §3).
 - Correction : hook rendu autonome (plus de dépendance à `husky.sh`) + script
   `"prepare": "git config core.hooksPath .husky"` dans `package.json` (pas de nouvelle
   dépendance). Vérifié par un vrai `git commit` : le hook exécute lint, typecheck et
-  tests (`captures/04-hook-precommit.txt`).
+  tests (`captures/04-hook-precommit.png`).
 
 **15. Le plugin de checks post-écriture ne pouvait pas tourner.**
 - Le plugin `.opencode/plugin/checks.js` lance `bash scripts/checks.sh`. Sur cette
@@ -210,7 +210,7 @@ packagé (voir §3).
   error 'unused' is assigned a value but never used  @typescript-eslint/no-unused-vars
   error Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
   ```
-  (`captures/03-lint-actif.txt`).
+  (`captures/03-lint-actif.png`).
 - Correction : `tseslint.configs.recommended` + `ignores`.
 
 **17. Le typecheck ne vérifiait presque rien.**
@@ -309,8 +309,8 @@ qui renvoie les creneaux libres d'une salle sur la journee demandee, avec ses te
   `planner`, `dev`, `tester` : **jamais appelés**.
 - L'`architect` a écrit lui-même tout le code (droit `edit` ouvert), sans plan sur disque,
   sans relecture effective, sans tester. Session coupée après >5 min sans fin.
-- Preuves : `captures/avant/git-status.txt`, `captures/avant/diff-avant.patch`,
-  `captures/avant/chain-errors.log`.
+- Preuves : `captures/avant/git-status.png`, `captures/avant/diff-avant.png`,
+  `captures/avant/chain-errors.png`.
 
 ### Après (dépôt réparé)
 
@@ -321,7 +321,7 @@ qui renvoie les creneaux libres d'une salle sur la journee demandee, avec ses te
 - Le `dev` a produit `src/lib/availability.ts`, le endpoint dans `src/routes/rooms.ts`,
   et les deux fichiers de tests. Filet vert : `lint`, `typecheck`, `build`, **38 tests
   passent** (6 fichiers).
-- Preuves : `captures/06-apres-chain.txt`, `captures/07-apres-tests.txt`.
+- Preuves : `captures/06-apres-chain.png`, `captures/07-apres-tests.png`.
 
 | | Avant | Après |
 |---|---|---|
