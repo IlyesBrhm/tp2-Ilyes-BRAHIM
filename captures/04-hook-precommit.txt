@@ -1,0 +1,37 @@
+﻿git : 
+Au caractère Ligne:5 : 1
++ git -C $repo commit --allow-empty -m "test hook" 2>&1 | Out-File -Enc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+> salles-api@0.4.2 lint
+> eslint src test
+
+
+> salles-api@0.4.2 typecheck
+> tsc --noEmit
+
+
+> salles-api@0.4.2 test
+> vitest run
+
+
+ RUN  v2.1.9 C:/Users/ilyes/tp2-Ilyes-BRAHIM
+
+ Ô£ô test/price.spec.ts (4 tests) 3ms
+ Ô£ô test/overlap.spec.ts (6 tests | 1 skipped) 
+4ms
+ Ô£ô test/store.spec.ts (5 tests) 6ms
+ Ô£ô test/bookings.spec.ts (5 tests) 85ms
+
+ Test Files  4 passed (4)
+      Tests  19 passed | 1 skipped (20)
+   Start at  14:15:43
+   Duration  778ms (transform 158ms, setup 0ms, collect 438ms, tests 99ms, environment 1ms, prepare 
+561ms)
+
+[__hooktest 21d3e9e] test hook
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ rename test/{bookings.test.ts => bookings.spec.ts} (100%)
+ rename test/{price.test.ts => price.spec.ts} (100%)

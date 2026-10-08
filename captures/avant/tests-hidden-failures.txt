@@ -1,0 +1,69 @@
+﻿
+> salles-api@0.4.2 test:unit
+> vitest run
+
+
+ RUN  v2.1.9 C:/Users/ilyes/tp2-Ilyes-BRAHIM
+
+ Ô£ô test/overlap.spec.ts (6 tests | 4 skipped) 3ms
+ Ô£ô test/store.spec.ts (3 tests) 4ms
+ ÔØ» test/price.spec.ts (4 tests | 1 failed) 10ms
+   ├ù priceFor > ajoute la majoration de week-end 7ms
+     ÔåÆ expected '5020' to be 70 // Object.is equality
+ ÔØ» test/bookings.spec.ts (5 tests | 1 failed) 103ms
+   ├ù POST /bookings > accepte une reservation qui commence quand la precedente finit 19ms
+     ÔåÆ expected 409 to be 201 // Object.is equality
+
+node.exe : ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 2 ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+Au caractère Ligne:1 : 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ÔÄ»ÔÄ»ÔÄ»Ô...»ÔÄ»ÔÄ»ÔÄ»:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+ FAIL  test/bookings.spec.ts > POST /bookings > accepte une reservation 
+qui commence quand la precedente finit
+AssertionError: expected 409 to be 201 // Object.is equality
+
+- Expected
++ Received
+
+- 201
++ 409
+
+ ÔØ» test/bookings.spec.ts:85:27
+     83|       endsAt: "2026-11-03T11:00:00Z"
+     84|     });
+     85|     expect(second.status).toBe(201);
+       |                           ^
+     86|   });
+     87| });
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/2]ÔÄ»
+
+ FAIL  test/price.spec.ts > priceFor > ajoute la majoration de week-end
+AssertionError: expected '5020' to be 70 // Object.is equality
+
+- Expected: 
+70
+
++ Received: 
+"5020"
+
+ ÔØ» test/price.spec.ts:13:78
+ Test Files  2 failed | 2 passed (4)
+      Tests  2 failed | 12 passed | 4 skipped (18)
+   Start at  14:09:18
+   Duration  811ms (transform 196ms, setup 0ms, collect 463ms, tests 120ms, environment 1ms, prepare 674ms)
+
+     11|   it("ajoute la majoration de week-end", () => {
+     12|     // samedi 10 octobre 2026
+     13|     expect(priceFor(salleA, 
+"2026-10-10T09:00:00Z", "2026-10-10T11:00:ÔÇª
+       |                                                                              ^
+     14|   });
+     15| 
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/2]ÔÄ»
+
