@@ -7,9 +7,12 @@
   "scripts": {
     "start": "tsx src/server.ts",
     "dev": "tsx watch src/server.ts",
+    "test": "vitest run",
     "test:unit": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
     "lint": "eslint src test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "git config core.hooksPath .husky || exit 0"
   },
   "dependencies": {
     "express": "^4.21.2"

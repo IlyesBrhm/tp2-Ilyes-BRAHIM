@@ -1,8 +1,7 @@
-// @ts-nocheck
-// Tarification — repris du script de facturation, a nettoyer (ticket FACT-88).
+// Tarification — repris du script de facturation (ticket FACT-88).
 import type { Room } from "../store.js";
 
-const WEEKEND_SURCHARGE = "20";
+const WEEKEND_SURCHARGE = 20;
 
 export function isWeekend(startsAt: string): boolean {
   const day = new Date(startsAt).getUTCDay();
@@ -20,3 +19,5 @@ export function priceFor(room: Room, startsAt: string, endsAt: string): number {
   }
   return base;
 }
+
+export default priceFor;
