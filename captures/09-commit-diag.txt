@@ -1,0 +1,52 @@
+﻿git : 
+Au caractère Ligne:4 : 1
++ git -C $repo commit -m "docs(tp2): DIAGNOSTIC.md et captures avant/ap ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+> salles-api@0.4.2 lint
+> eslint src test
+
+
+> salles-api@0.4.2 typecheck
+> tsc --noEmit
+
+
+> salles-api@0.4.2 test
+> vitest run
+
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.9 [39m[90mC:/Users/ilyes/tp2-Ilyes-BRAHIM[39m
+
+ [32mÔ£ô[39m test/overlap.spec.ts [2m([22m[2m6 tests[22m[2m | [22m[33m1 skipped[39m[2m)[22m[90m 
+4[2mms[22m[39m
+ [32mÔ£ô[39m test/price.spec.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 3[2mms[22m[39m
+ [32mÔ£ô[39m test/store.spec.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 5[2mms[22m[39m
+ [32mÔ£ô[39m test/availability.spec.ts [2m([22m[2m12 tests[22m[2m)[22m[90m 8[2mms[22m[39m
+ [32mÔ£ô[39m test/rooms-availability.spec.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 79[2mms[22m[39m
+ [32mÔ£ô[39m test/bookings.spec.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 93[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[32m38 passed[39m[22m[2m | [22m[33m1 skipped[39m[90m (39)[39m
+[2m   Start at [22m 14:29:23
+[2m   Duration [22m 850ms[2m (transform 259ms, setup 0ms, collect 901ms, tests 193ms, environment 1ms, prepare 
+943ms)[22m
+
+[fix/harness-repair 0ad57ef] docs(tp2): DIAGNOSTIC.md et captures avant/apres
+ 15 files changed, 944 insertions(+)
+ create mode 100644 DIAGNOSTIC.md
+ create mode 100644 captures/02-tests-corriges.txt
+ create mode 100644 captures/03-lint-actif.txt
+ create mode 100644 captures/04-hook-precommit.txt
+ create mode 100644 captures/05-commit-harness.txt
+ create mode 100644 captures/06-apres-chain.txt
+ create mode 100644 captures/07-apres-tests.txt
+ create mode 100644 captures/08-commit-feature.txt
+ create mode 100644 captures/README.md
+ create mode 100644 captures/avant/availability.spec.ts
+ create mode 100644 captures/avant/availability.ts
+ create mode 100644 captures/avant/diff-avant.patch
+ create mode 100644 captures/avant/git-status.txt
+ create mode 100644 captures/avant/rooms-availability.spec.ts
+ create mode 100644 captures/avant/tests-hidden-failures.txt
